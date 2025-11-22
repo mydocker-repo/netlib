@@ -82,7 +82,7 @@ async function loginWithAccount(user, pass) {
     // 检查登录是否成功
     const pageContent = await page.content();
     
-    if (pageContent.includes('exclusive owner') || pageContent.includes(user)) {
+    if (pageContent.includes(`logged as ${user}`)) {
       console.log(`✅ ${user} - 登录成功`);
       result.success = true;
       result.message = `✅ ${user} 登录成功`;
