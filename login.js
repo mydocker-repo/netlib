@@ -119,6 +119,7 @@ async function main() {
       console.log('⏳ 等待3秒后处理下一个账号...');
       await new Promise(resolve => setTimeout(resolve, 3000));
     }
+    break;
   }
   
   // 汇总所有结果并发送一条消息
